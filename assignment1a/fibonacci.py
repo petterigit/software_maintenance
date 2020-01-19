@@ -19,25 +19,22 @@ def fibonacci(*args):
         b = -1
 
 
-    ### Below if checks commented out for test run 1
+    ### Below if checks commented out for test run 2
     if (isinstance(n, bool)):
         n = 10
     if (isinstance(b, bool)):
         b = -1
 
 
-    ### Below default values changed for test run 2
     try:
         n = int(n)
     except:
         n = 10
-        #n = 1
 
     try:
         b = int(b)
     except:
         b = -1
-        #b = 3
 
 
     file = open("fibonacciResults.txt", "w")
@@ -51,6 +48,7 @@ def fibonacci(*args):
             n = n - 1
         a = a + 1
 
+    ### Below line was commented out for test run 3
     file.write(str(series))
     file.close()
 
