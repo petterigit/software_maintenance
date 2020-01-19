@@ -1,0 +1,58 @@
+petteri@petteri-Latitude-3330:~/Documents/SoftwareMaintenance/software_maintenance/assignment1a$ python3 unitTests.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.016s
+
+OK
+petteri@petteri-Latitude-3330:~/Documents/SoftwareMaintenance/software_maintenance/assignment1a$ python3 unitTests.py
+F..
+======================================================================
+FAIL: test_faultyInputs (__main__.TestUM)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unitTests.py", line 45, in test_faultyInputs
+    self.assertEqual(testResults, expectedResults)
+AssertionError: Lists differ: [[0, [62 chars]4], [1], [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], [0[27 chars] 34]] != [[0, [62 chars]4], [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], [0, 1, [57 chars] 34]]
+
+First differing element 2:
+[1]
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+  [[0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
+   [0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
+-  [1],
++  [0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
+   [0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
+   [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]]
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.016s
+
+FAILED (failures=1)
+petteri@petteri-Latitude-3330:~/Documents/SoftwareMaintenance/software_maintenance/assignment1a$ python3 unitTests.py
+F..
+======================================================================
+FAIL: test_faultyInputs (__main__.TestUM)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unitTests.py", line 45, in test_faultyInputs
+    self.assertEqual(testResults, expectedResults)
+AssertionError: Lists differ: [[0, [27 chars]4], [5], [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], [0[32 chars] [5]] != [[0, [27 chars]4], [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], [0, 1, [92 chars] 34]]
+
+First differing element 1:
+[5]
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+  [[0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
+-  [5],
+   [0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
+   [0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
+-  [5]]
++  [0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
++  [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]]
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.021s
+
+FAILED (failures=1)
+petteri@petteri-Latitude-3330:~/Documents/SoftwareMaintenance/software_maintenance/assignment1a$

@@ -10,6 +10,7 @@ def fibonacci(*args):
 
     # For command-line usage
 
+
     try:
         n = args[0]
         b = args[1]
@@ -17,23 +18,27 @@ def fibonacci(*args):
         n = 10
         b = -1
 
-    #n = args[0]
-    #b = args[1]
 
+    ### Below if checks commented out for test run 1
     if (isinstance(n, bool)):
         n = 10
     if (isinstance(b, bool)):
         b = -1
 
+
+    ### Below default values changed for test run 2
     try:
         n = int(n)
     except:
         n = 10
+        #n = 1
 
     try:
         b = int(b)
     except:
         b = -1
+        #b = 3
+
 
     file = open("fibonacciResults.txt", "w")
 
