@@ -1,41 +1,54 @@
-def fibonacci(a):
+import sys
+
+def getFibonacci(a):
     if (a<=1):
         return a
     else:
-        return (fibonacci(a-1) + fibonacci(a-2))
+        return (getFibonacci(a-1) + getFibonacci(a-2))
 
-def checkLength(length):
+def fibonacci(*args):
+
+    # For command-line usage
+
     try:
-        length = int(length)
+        n = args[0]
+        b = args[1]
     except:
-        length = 10
-    return length
+        n = 10
+        b = -1
 
-def checkStartingFrom(startingFrom):
+    #n = args[0]
+    #b = args[1]
+
+    if (isinstance(n, bool)):
+        n = 10
+    if (isinstance(b, bool)):
+        b = -1
+
     try:
-        startingFrom = int(startingFrom)
+        n = int(n)
     except:
-        startingFrom = -1
-    return(startingFrom)
+        n = 10
 
+    try:
+        b = int(b)
+    except:
+        b = -1
 
-def main():
-    n = input("Series length (no input uses default): ")
-    b = input("Only numbers over (default: -1): ")
-    n = checkLength(n)
-    b = checkStartingFrom(b)
-
-    file = open("fibonacciResults.txt", "a")
+    file = open("fibonacciResults.txt", "w")
 
     a = 0
+    series = []
     while ( n > 0 ):
-        toPrint = fibonacci(a)
-        if (toPrint > b):
-            print("Writing: " + str(toPrint) + " to file")
-            file.write(str(toPrint) + "\n")
+        toAppend = getFibonacci(a)
+        if (toAppend > b):
+            series.append(toAppend)
             n = n - 1
         a = a + 1
-    
-    file.close()
-main()
 
+    file.write(str(series))
+    file.close()
+
+    return(series)
+
+#fibonacci()
